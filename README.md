@@ -16,3 +16,5 @@ order.products << milk
 order.line_items
 
 order.save
+
+.delete_all
