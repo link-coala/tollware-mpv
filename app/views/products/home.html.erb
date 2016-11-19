@@ -1,0 +1,49 @@
+
+<h1>hay <%= @product.count %> productos</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>price</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @product.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+      
+    </tr>
+  <% end %>
+</table>
+<h1>hay <%= @order.count %> ordenes</h1>
+<table>
+  <tr>
+    <th>direccion</th>
+    <th>items</th> 
+    <th>nombre</th>   
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @order.each do |order| %>
+    <tr>
+      <td><%= order.delivery_address %></td>
+      <td><%= order.line_items.count %></td>
+             
+            <td><%= link_to 'Show'  %></td>
+      <td>
+
+      <% @product.each do |product| %>
+<td><%= product.name %></td>
+      <td><%= product.line_items %></td>   
+<% end %>
+
+
+  <% end %>
+</table>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<h2>Productos de la orden</h2>
+<ul>
+
+</ul>
