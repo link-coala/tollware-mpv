@@ -9,9 +9,9 @@ flour = Product.create(name: 'Flour (1 kg)', price: 0.45)
 
 order = Order.new(delivery_address: '123 Acme Street, ACME STATE 12345')
 
-order.products.count
-
 order.products << milk
+
+order.products.count
 
 order.line_items
 

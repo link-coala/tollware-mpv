@@ -1,13 +1,9 @@
-<%= form_for :order, url: orders_new_path do |f| %>
- 
- 
+<%= form_for :order, url: orders_path do |f| %>
   <p>
     <%= f.label :delivery_address %><br>
     <%= f.text_field :delivery_address %>
   </p>
- 
   <p>
     <%= f.submit %>
   </p>
- 
 <% end %>

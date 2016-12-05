@@ -10,4 +10,11 @@ def create
     render 'new'
   end
 end
+def show
+	 @order = Order.find(params[:id])
+	end
+private
+  def order_params
+  params.require(:order).permit(:delivery_address)
+  end
 end
