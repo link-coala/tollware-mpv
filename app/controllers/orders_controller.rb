@@ -13,6 +13,12 @@ end
 def show
 	 @order = Order.find(params[:id])
 	end
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_to products_home_path
+ 
+  end  
 private
   def order_params
   params.require(:order).permit(:delivery_address)

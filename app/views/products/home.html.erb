@@ -22,7 +22,7 @@
   <tr>
     <th>direccion</th>
     <th>items</th> 
-    <th>nombre</th>   
+  
     <th colspan="3"></th>
   </tr>
  
@@ -30,14 +30,11 @@
     <tr>
       <td><%= order.delivery_address %></td>
       <td><%= order.line_items.count %></td>
-             
-            <td><%= link_to 'Show'  %></td>
+      <td><%= link_to 'Destroy', order_path(order),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
       <td>
 
-      <% @product.each do |product| %>
-<td><%= product.name %></td>
-      <td><%= product.line_items %></td>   
-<% end %>
 
 
   <% end %>
