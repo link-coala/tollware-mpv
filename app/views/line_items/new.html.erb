@@ -1,0 +1,9 @@
+<%= form_for :line_items, url: line_items_path do |f| %>
+  <p>
+    <%= f.label :order_id %><br>
+    <%= f.text_field :order_id %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

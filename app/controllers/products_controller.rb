@@ -32,9 +32,12 @@ end
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to products_home_path
- 
-  end
-  
+ end
+
+def destroy_all
+    @product = Product.all
+    @product.destroy_all
+end  
 
   
   private
