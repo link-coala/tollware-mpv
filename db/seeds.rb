@@ -10,5 +10,4 @@
  flour = Product.create(name: 'Flour (1 kg)', price: 0.45)
  order = Order.new(delivery_address: '123 Acme Street, ACME STATE 12345')
  
- order.line_items.first.update_attributes(quantity: 3)
- order.line_items.create(product_id: butter.id, quantity: 2)
+
